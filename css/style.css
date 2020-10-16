@@ -1,0 +1,74 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+/* font-family: 'Dancing Script', cursive; */
+
+* {
+    box-sizing: border-box;
+}
+:root {
+    --font-family-principal:'Dancing Script', cursive;
+}
+
+body {
+    background-image: url(../img/documentos-boligrafo-sobre-fondo-mesa-madera_41050-2742.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1em;
+}
+.wrapper {
+    max-width: 500px;
+    background-image: url('../img/e35b61057f40e8a8ad8daa9d4c4e5e9f.png');
+    margin: 30px auto;
+}
+
+header h1, header input, section input, main li,footer h2 {
+ font-family: var(--font-family-principal);
+}
+
+/* inicio header */
+header.row{
+
+    max-width: 700px;
+}
+header h1 {
+ font-size: 3em;
+ padding: .3em 0;
+ text-align: center;
+}
+header form {
+ display: flex;
+ /* flex-wrap: wrap; */
+ justify-content: space-around;
+ padding: 1.2em 0;
+}
+
+/* inicio main  */
+main {
+    background-color: white;
+    margin: 1em;
+    padding: 1em;
+}
+main form {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+main ul li {
+    margin-bottom: .5em;
+    font-size: 1.5em;
+    position: relative;
+    border-bottom: 2px solid rgb(112, 157, 240);
+}
+main ul li button {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* inicio footer  */
+footer h2 {
+    text-align: right;
+    padding: 2em 2em 1em;
+}
