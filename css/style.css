@@ -21,8 +21,17 @@ body {
     margin: 30px auto;
 }
 
-header h1, header input, section input, main li,footer h2 {
+header h1, header form input, main form input, main li,footer h2 {
  font-family: var(--font-family-principal);
+ font-size: 1.2em;
+ font-weight: 700;
+}
+input,select {
+    border-radius: 5%;
+}
+button {
+    border-radius: 10%;
+    border: none;
 }
 
 /* inicio header */
@@ -37,11 +46,18 @@ header h1 {
 }
 header form {
  display: flex;
- /* flex-wrap: wrap; */
  justify-content: space-around;
  padding: 1.2em 0;
 }
-
+header form button {
+    padding: .2em 1em;
+    background-color: blue;
+    color: white;
+    transition: .5s ;
+}
+header form button:hover {
+    background-color: rgb(9, 184, 9);
+}
 /* inicio main  */
 main {
     background-color: white;
@@ -60,11 +76,18 @@ main ul li {
     border-bottom: 2px solid rgb(112, 157, 240);
 }
 main ul li button {
-    display: inline-block;
+    padding: .2em .4em;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    transition: .5s;
+    background-color: rgb(255, 148, 129);
+}
+main ul li button:hover {
+    background-color: red;
+    padding-right: 3em;
+    color: white;
 }
 
 /* inicio footer  */
