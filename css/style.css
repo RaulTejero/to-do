@@ -81,6 +81,7 @@ main ul li {
     font-size: 1.5em;
     display: flex;
     justify-content: space-between;
+    border-bottom: 2px solid rgb(123, 193, 250);
 }
 main ul li button {
     transition: .5s;
