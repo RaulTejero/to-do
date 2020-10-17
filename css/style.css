@@ -11,8 +11,9 @@
 
 body {
     background-image: url(../img/documentos-boligrafo-sobre-fondo-mesa-madera_41050-2742.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
+
     font-size: 1em;
 }
 .wrapper {
@@ -22,28 +23,37 @@ body {
 }
 
 header h1, header form input, main form input, main li,footer h2 {
- font-family: var(--font-family-principal);
- font-size: 1.2em;
- font-weight: 700;
+    font-family: var(--font-family-principal);
+    font-size: 1.2em;
+    font-weight: 700;
 }
 button {
     border: none;
     display: inline-block;
 }
 
+.priority_red {
+    color: rgb(194, 61, 52);
+}
+.priority_yellow {
+   color:rgb(61, 64, 236);
+}
+.priority_green {
+    color: rgb(13, 126, 3);
+}
 /* inicio header */
 header.row{
     max-width: 700px;
 }
 header h1 {
- font-size: 3em;
- padding: .3em 0;
- text-align: center;
+    font-size: 3em;
+    padding: .3em 0;
+    text-align: center;
 }
 header form {
- display: flex;
- justify-content: space-around;
- padding: 1.2em 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 1.2em 0;
 }
 header form button {
     padding: .2em 1em;
@@ -67,6 +77,7 @@ main form {
 }
 main ul li {
     margin-bottom: .5em;
+    padding-left: .2em;
     font-size: 1.5em;
     display: flex;
     justify-content: space-between;

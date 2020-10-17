@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+<script src="js/data.js"></script>
 
 <head>
     <meta charset="UTF-8">
@@ -15,12 +16,15 @@
                 <h1>Lista de tareas</h1>
             </div>
             <div class="row">
-                <form>
+                <form action="#">
                     <input type="text" value="" id="input_header" placeholder="Introduce tarea">
                     <select name="" id="select_header">
                         <option value="">Selecciona prioridad</option>
+                        <option value="red">Diario</option>
+                        <option value="yellow">Semanal</option>
+                        <option value="green">Mensual</option>
                     </select>
-                    <button type="input" id="btn_header">Añadir</button>
+                    <button id="btn_header">Añadir</button>
                 </form>
             </div>
         </header>
@@ -28,15 +32,16 @@
             <div>
                 <form>
                     <select name="" id="select_main">
-                        <option value="">Selecciona prioridad</option>
+                        <option value="0">Selecciona prioridad</option>
+                        <option value="Diario">Diario</option>
+                        <option value="semanal">Semanal</option>
+                        <option value="Mensual">Mensual</option>
                     </select>
                     <input type="text" id="input_main" placeholder="Tarea a buscar">
                 </form>
             </div>
             <div>
                 <ul id="list">
-                    <!-- <li>tarea<button>eliminar</button></li>
-                    <li>tarea<button>eliminar</button></li> -->
                 </ul>
             </div>
         </main>
@@ -46,6 +51,7 @@
             </div>
         </footer>
     </div>
+    <script src="js/data.js"></script>
     <script src="js/funtions.js"></script>
     <script src="js/main.js"></script>
 </body>
