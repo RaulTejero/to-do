@@ -26,17 +26,13 @@ header h1, header form input, main form input, main li,footer h2 {
  font-size: 1.2em;
  font-weight: 700;
 }
-input,select {
-    border-radius: 5%;
-}
 button {
-    border-radius: 10%;
     border: none;
+    display: inline-block;
 }
 
 /* inicio header */
 header.row{
-
     max-width: 700px;
 }
 header h1 {
@@ -72,21 +68,16 @@ main form {
 main ul li {
     margin-bottom: .5em;
     font-size: 1.5em;
-    position: relative;
-    border-bottom: 2px solid rgb(112, 157, 240);
+    display: flex;
+    justify-content: space-between;
 }
 main ul li button {
-    padding: .2em .4em;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
     transition: .5s;
     background-color: rgb(255, 148, 129);
 }
 main ul li button:hover {
     background-color: red;
-    padding-right: 3em;
+    padding-right: 2em;
     color: white;
 }
 
