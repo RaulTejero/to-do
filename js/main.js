@@ -11,11 +11,11 @@ function print(pList, pSection = sectionList) {
     pSection.innerHTML = "";
     pList.forEach(el => {
         if (el.prioridad == 'diario') {
-            pSection.innerHTML += `<li class ="priority_red">${el.titulo}<button onClick="removeTask()">Eliminar</button></li>`;
+            pSection.innerHTML += `<li class ="priority_red" data-id="${el.idTarea}">${el.titulo}<button onClick="removeTask(this)">Eliminar</button></li>`;
         } else if (el.prioridad == 'semanal') {
-            pSection.innerHTML += `<li class ="priority_yellow">${el.titulo}<button onClick="removeTask()">Eliminar</button></li>`;
+            pSection.innerHTML += `<li class ="priority_yellow"data-id="${el.idTarea}">${el.titulo}<button onClick="removeTask(this)">Eliminar</button></li>`;
         } else {
-            pSection.innerHTML += `<li class ="priority_green">${el.titulo}<button onClick="removeTask()">Eliminar</button></li>`;
+            pSection.innerHTML += `<li class ="priority_green"data-id="${el.idTarea}">${el.titulo}<button onClick="removeTask(this)">Eliminar</button></li>`;
         };
     });
 };
@@ -37,10 +37,10 @@ btnAdd.addEventListener('click', () => {
         priorityAdd.value = '';
         inputFind.value = '';
         selectFilter.value = '';
-        counterId++
+
 
         print(list)
-
+        counterId++
     } else {
         alert('Los campos no pueden estar vacios')
         inputAdd.value = '';
@@ -53,21 +53,25 @@ btnAdd.addEventListener('click', () => {
 
 function filterListByPriority(pPriority) {
     let filterList = list.filter(el => el.prioridad == pPriority);
-    print(filterList)
+    console.log(filterList);
+    (filterList.length != 0) ? print(filterList) : print(list);
 };
-
-
 
 selectFilter.addEventListener('change', event => {
     let value = event.target.value;
     filterListByPriority(value);
 });
 
-// function findTask(pText) {
-// };
+function remove(pList, id) {
+    findRemove = pList.findIndex(el => el.idTarea == id);
+    pList.splice(findRemove, 1);
+    print(pList);
+}
+function removeTask(event) {
+    let id = event.parentNode.dataset.id;
+    remove(list, id);
+};
 
-inputFind.addEventListener('input', event => {
-    let value = event.target.value.trim();
-    findTask(value);
-})
+
+
 
