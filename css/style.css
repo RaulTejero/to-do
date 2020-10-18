@@ -1,5 +1,6 @@
 @import url('reset.css');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
 /* font-family: 'Dancing Script', cursive; */
 
 * {
@@ -27,9 +28,28 @@ header h1, header form input, main form input, main li,footer h2 {
     font-size: 1.2em;
     font-weight: 700;
 }
+form input{
+    border:none;
+    border-bottom: 2px solid rgb(161, 205, 255);
+    text-align: center;
+}
+form select {
+    /* border: 2px solid rgb(161, 205, 255); */
+    border:none;
+    border-bottom: 2px solid rgb(161, 205, 255);
+    font-family: var(--font-family-principal);
+    font-size: 1em;
+    font-weight: 900;
+    text-align: center;
+    appearance: none;
+}
+form select:hover {
+    cursor: pointer;
+}
 button {
     border: none;
     display: inline-block;
+    border-radius: 10%;
 }
 
 .priority_red {
@@ -53,7 +73,7 @@ header h1 {
 header form {
     display: flex;
     justify-content: space-around;
-    padding: 1.2em 0;
+    padding: 1em 0;
 }
 header form button {
     padding: .2em 1em;
@@ -62,16 +82,16 @@ header form button {
     transition: .5s ;
 }
 header form button:hover {
-    background-color: rgb(9, 184, 9);
+    background-color: rgb(204, 218, 14);
 }
 /* inicio main  */
 main {
-    background-color: white;
-    margin: 1em;
+    /* background-color: white; */
+    margin: 1.3em;
     padding: 1em;
 }
 main form {
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
     display: flex;
     justify-content: space-around;
 }
@@ -81,7 +101,6 @@ main ul li {
     font-size: 1.5em;
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid rgb(123, 193, 250);
 }
 main ul li button {
     transition: .5s;

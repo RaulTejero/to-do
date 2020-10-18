@@ -5,7 +5,7 @@ let priorityAdd = document.querySelector('#select_header');
 let inputFind = document.querySelector('#input_main');
 let selectFilter = document.querySelector('#select_main');
 
-
+print(list)
 
 function print(pList, pSection = sectionList) {
     pSection.innerHTML = "";
@@ -17,7 +17,9 @@ function print(pList, pSection = sectionList) {
         } else {
             pSection.innerHTML += `<li class ="priority_green"data-id="${el.idTarea}">${el.titulo}<button onClick="removeTask(this)">Eliminar</button></li>`;
         };
+
     });
+    console.log(list);
 };
 
 
@@ -53,7 +55,6 @@ btnAdd.addEventListener('click', () => {
 
 function filterListByPriority(pPriority) {
     let filterList = list.filter(el => el.prioridad == pPriority);
-    console.log(filterList);
     (filterList.length != 0) ? print(filterList) : print(list);
 };
 
