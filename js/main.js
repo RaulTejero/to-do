@@ -47,18 +47,27 @@ btnAdd.addEventListener('click', () => {
         priorityAdd.value = '';
         inputFind.value = '';
         selectFilter.value = '';
-    }
+    };
 });
 
 
-function filterListByPriority(pList, pPriority) {
-    for (const task of pList) {
-        if (task.prioridad == pPriority) {
-            let arr = [task];
-            print(arr)
-        }
+function filterListByPriority(pPriority) {
+    let filterList = list.filter(el => el.prioridad == pPriority);
+    print(filterList)
+};
 
-    }
-}
-filterListByPriority(list, "semanal");
-// falata hacer el addEventListener del select y pasar como parametro
+
+
+selectFilter.addEventListener('change', event => {
+    let value = event.target.value;
+    filterListByPriority(value);
+});
+
+// function findTask(pText) {
+// };
+
+inputFind.addEventListener('input', event => {
+    let value = event.target.value.trim();
+    findTask(value);
+})
+
