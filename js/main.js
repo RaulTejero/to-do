@@ -1,3 +1,5 @@
+
+
 let sectionList = document.querySelector('#list');
 let btnAdd = document.querySelector('#btn_header');
 let inputAdd = document.querySelector('#input_header');
@@ -7,20 +9,20 @@ let selectFilter = document.querySelector('#select_main');
 
 print(list)
 
-function print(pList, pSection = sectionList) {
-    pSection.innerHTML = "";
-    pList.forEach(el => {
-        if (el.prioridad == 'diario') {
-            pSection.innerHTML += `<li class ="priority_red" data-id="${el.idTarea}">${el.titulo}<button onClick="removeTask(this)"><i class="fas fa-eraser"></i></button></li>`;
-        } else if (el.prioridad == 'semanal') {
-            pSection.innerHTML += `<li class ="priority_yellow"data-id="${el.idTarea}">${el.titulo}<button onClick="removeTask(this)"><i class="fas fa-eraser"></i></button></li>`;
-        } else {
-            pSection.innerHTML += `<li class ="priority_green"data-id="${el.idTarea}">${el.titulo}<button onClick="removeTask(this)"><i class="fas fa-eraser"></i></button></li>`;
-        };
+// function print(pList, pSection = sectionList) {
+//     pSection.innerHTML = "";
+//     pList.forEach(el => {
+//         if (el.prioridad == 'diario') {
+//             pSection.innerHTML += `<li class ="priority_red" data-id="${el.idTarea}">${el.titulo}<button onClick="removeTask(this)"><i class="fas fa-eraser"></i></button></li>`;
+//         } else if (el.prioridad == 'semanal') {
+//             pSection.innerHTML += `<li class ="priority_yellow"data-id="${el.idTarea}">${el.titulo}<button onClick="removeTask(this)"><i class="fas fa-eraser"></i></button></li>`;
+//         } else {
+//             pSection.innerHTML += `<li class ="priority_green"data-id="${el.idTarea}">${el.titulo}<button onClick="removeTask(this)"><i class="fas fa-eraser"></i></button></li>`;
+//         };
 
-    });
-    console.log(list);
-};
+//     });
+//     console.log(list);
+// };
 
 
 
@@ -53,14 +55,14 @@ btnAdd.addEventListener('click', () => {
 });
 
 
-function filterListByPriority(pPriority) {
-    let filterList = list.filter(el => el.prioridad == pPriority);
-    (filterList.length != 0) ? print(filterList) : print(list);
+function filterListByPriority(pList, pPriority) {
+    let filterList = pList.filter(el => el.prioridad == pPriority);
+    (filterList.length != 0) ? print(filterList) : print(pList);
 };
 
 selectFilter.addEventListener('change', event => {
-    let value = event.target.value;
-    filterListByPriority(value);
+    let result = event.target.value;
+    filterListByPriority(list, result);
 });
 
 function remove(pList, id) {
@@ -73,13 +75,16 @@ function removeTask(event) {
     remove(list, id);
 };
 
-const findTask = inputFind.addEventListener('input', (event) => {
-    let word = event.target.value;
+function findWord(event) {
+    let letters = event.target.value;
+    let filterList = list.filter(task => task.titulo.toLowerCase().includes(letters.toLowerCase()));
+    letters.toLowerCase();
 
-});
-
-function filterWord(pList, pWord) {
-
+    print(filterList);
 }
+
+
+
+inputFind.addEventListener("input", findWord);
 
 
