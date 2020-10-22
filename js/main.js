@@ -73,7 +73,13 @@ function removeTask(event) {
     remove(list, id);
 };
 
+const findTask = inputFind.addEventListener('input', (event) => {
+    let word = event.target.value;
 
+});
 
+function filterWord(pList, pWord) {
+
+}
 
 

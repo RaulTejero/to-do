@@ -34,7 +34,6 @@ form input{
     text-align: center;
 }
 form select {
-    /* border: 2px solid rgb(161, 205, 255); */
     border:none;
     border-bottom: 2px solid rgb(161, 205, 255);
     font-family: var(--font-family-principal);
@@ -87,7 +86,6 @@ header form button:hover {
 }
 /* inicio main  */
 main {
-    /* background-color: white; */
     margin: 1.3em;
     padding: 1em;
 }
