@@ -4,6 +4,7 @@ let inputAdd = document.querySelector('#input_header');
 let priorityAdd = document.querySelector('#select_header');
 let inputFind = document.querySelector('#input_main');
 let selectFilter = document.querySelector('#select_main');
+let msn = document.querySelector('#msn');
 
 print(list);
 
@@ -17,10 +18,11 @@ btnAdd.addEventListener('click', () => {
             prioridad: priorityAdd.value
         };
         list.push(newOject);
+        msn.className = 'blockNone';
         print(list)
         counterId++
     } else {
-        alert('Los campos no pueden estar vacios')
+        msn.className = 'block';
     };
     inputAdd.value = '';
     priorityAdd.value = '';

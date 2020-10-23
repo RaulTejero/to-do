@@ -13,7 +13,7 @@
 body {
     background-image: url(../img/documentos-boligrafo-sobre-fondo-mesa-madera_41050-2742.jpg);
     background-repeat: repeat;
-    background-size: cover;
+    background-size: contain;
     font-size: 1em;
 }
 .row {
@@ -58,7 +58,9 @@ header h1 {
  text-align: center;
  font-size: 2.4em;
 }
-
+.blockNone {
+    display: none;
+}
 .block{
     font-size: 1.2em;
     color: red;
