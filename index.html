@@ -12,29 +12,28 @@
 
 <body>
     <div class="wrapper">
-        <header class="row">
+        <header>
             <div>
                 <h1>Lista de tareas</h1>
-                <div>
-
-                </div>
+                <p class="">¡¡¡Rellena los campos!!!</p>
             </div>
-            <div class="row">
-                <form action="#">
-                    <input type="text" value="" id="input_header" placeholder="Introduce tarea">
-                    <select name="" id="select_header">
+            <form action="#">
+                <div class="row">
+                    <input type="text" id="input_header" placeholder="Introduce tarea">
+                    <select id="select_header">
                         <option value="">Selecciona prioridad </option>
                         <option value="diario">Diario</option>
                         <option value="semanal">Semanal</option>
                         <option value="mensual">Mensual</option>
                     </select>
                     <button id="btn_header"><i class="fas fa-pencil-alt"></i></button>
-                </form>
-            </div>
+                </div>
+            </form>
+
         </header>
         <main>
-            <div>
-                <form>
+            <form>
+                <div class="row">
                     <select name="" id="select_main">
                         <option value="">Todas las prioridades</option>
                         <option value="diario">Diario</option>
@@ -42,15 +41,13 @@
                         <option value="mensual">Mensual</option>
                     </select>
                     <input type="text" id="input_main" placeholder="Tarea a buscar">
-                </form>
-            </div>
-            <div>
-                <ul id="list">
-                </ul>
-            </div>
+                </div>
+            </form>
+            <ul id="list">
+            </ul>
         </main>
         <footer>
-            <div class="row">
+            <div>
                 <h2>Copyright&copyRaulTejeroMartos</h2>
             </div>
         </footer>

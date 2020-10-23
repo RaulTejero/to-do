@@ -8,7 +8,5 @@ function print(pList, pSection = sectionList) {
         } else {
             pSection.innerHTML += `<li class ="priority_green"data-id="${el.idTarea}">${el.titulo}<button onClick="removeTask(this)"><i class="fas fa-eraser"></i></button></li>`;
         };
-
     });
-    console.log(list);
 };

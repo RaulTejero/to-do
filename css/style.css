@@ -14,90 +14,105 @@ body {
     background-image: url(../img/documentos-boligrafo-sobre-fondo-mesa-madera_41050-2742.jpg);
     background-repeat: repeat;
     background-size: cover;
-
     font-size: 1em;
 }
+.row {
+    display: flex;
+}
 .wrapper {
+    font-family: var(--font-family-principal);
     max-width: 500px;
     background-image: url('../img/e35b61057f40e8a8ad8daa9d4c4e5e9f.png');
     margin: 30px auto;
-}
-
-header h1, header form input, main form input, main li,footer h2 {
-    font-family: var(--font-family-principal);
-    font-size: 1.2em;
-    font-weight: 700;
-}
-form input{
-    border:none;
-    border-bottom: 2px solid rgb(161, 205, 255);
-    text-align: center;
-}
-form select {
-    border:none;
-    border-bottom: 2px solid rgb(161, 205, 255);
-    font-family: var(--font-family-principal);
-    font-size: 1em;
+    padding: 2.8em;
     font-weight: 900;
-    text-align: center;
-    appearance: none;
+    border-radius: 2%;
 }
-form select:hover {
-    cursor: pointer;
+input,select {
+    font-weight: inherit;
+    font-size: 1.2em;
+    font-family: inherit;
+    border: none;
+    background-color: rgb(255, 255, 248);
+}
+input {
+    text-align: center;
 }
 button {
     border: none;
-    display: inline-block;
     border-radius: 10%;
 }
+select {
+    appearance: none;
+}
+select:hover{
+    cursor: pointer;
+}
 
-.priority_red {
-    color: rgb(194, 61, 52);
+/* header  */
+header div:first-child {
+    position: relative;
 }
-.priority_yellow {
-   color:rgb(61, 64, 236);
-}
-.priority_green {
-    color: rgb(13, 126, 3);
-}
-/* inicio header */
-header.row{
-    max-width: 700px;
-}
+
 header h1 {
-    font-size: 3em;
-    padding: .3em 0;
+ text-align: center;
+ font-size: 2.4em;
+}
+
+.block{
+    font-size: 1.2em;
+    color: red;
     text-align: center;
+    display: block;
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
 }
-header form {
-    display: flex;
-    justify-content: space-around;
-    padding: 1em 0;
+header p {
+    display: block;
 }
-header form button {
-    padding: .2em 1em;
-    background-color: blue;
-    color: white;
-    transition: .5s ;
+
+header div.row {
+justify-content: space-between;
+margin: 38px 0;
+}
+header form button{
+    width: 10%;
+    background-color: rgb(250, 219, 96);
+    border-radius: 5%;
+    transition: .3s;
 }
 header form button:hover {
-    background-color: rgb(204, 218, 14);
-    color:black;
+    background-color: rgb(43, 153, 43);
+    color: white;
+    cursor: pointer;
 }
-/* inicio main  */
-main {
-    margin: 1.3em;
-    padding: 1em;
+header form button:active {
+    background-color: rgb(194, 233, 116);
 }
-main form {
-    margin-bottom: 1.2em;
-    display: flex;
-    justify-content: space-around;
+/* main  */
+
+main form div.row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+main ul {
+    margin: 30px auto;
+}
+.priority_red {
+    color: rgb(170, 36, 32);
+}
+.priority_yellow {
+    color: rgb(60, 73, 174);
+}
+.priority_green {
+    color: rgb(21, 121, 21);
 }
 main ul li {
     margin-bottom: .5em;
     padding-left: .2em;
-    font-size: 1.5em;
+    font-size: 1.6em;
     display: flex;
     justify-content: space-between;
 }
@@ -110,10 +125,10 @@ main ul li button:hover {
     background-color: red;
     padding-right: 2em;
     color: white;
-}
+} 
 
-/* inicio footer  */
-footer h2 {
+
+/* footer  */
+footer h2{
     text-align: right;
-    padding: 2em 2em 1em;
 }
